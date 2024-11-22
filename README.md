@@ -41,22 +41,23 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 The **Astronomy on Bluesky** project consists of the following repositories:
 
-| **Repository**          | **Description**                                                                                                                                                                                                      |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `astro-ph-bots`         | A collection of bots that post new papers added to astro-ph to Bluesky.                                                                                                                                              |
-| `astrobot`              | A bot that handles actions on the Astronomy feeds, like signups. It will also eventually include moderation and DM tools.                                                                                            |
-| `astrofeed-lib`         | Common functions for working with the Astronomy feeds, including the database and feed spec.                                                                                                                         |
-| `astrofeed-news-bot`    | A bot for posting news and updates about the Astronomy feeds.                                                                                                                                                        |
-| `astrofeed-server`      | Flask web app for hosting the astronomy feeds.                                                                                                                                                                       |
+| **Repository**          | **Description**                                                                                                                                    |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.github`               | Template things for the Bluesky-Astronomy organization.                                                                                            |
+| `astro-ph-bots`         | A collection of bots that post new papers added to astro-ph to Bluesky.                                                                            |
+| `astrobot`              | A bot that handles actions on the Astronomy feeds, like signups. It will also eventually include moderation and DM tools.                          |
+| `astrofeed-lib`         | Common functions for working with the Astronomy feeds, including the database and feed spec.                                                       |
+| `astrofeed-news-bot`    | A bot for posting news and updates about the Astronomy feeds.                                                                                      |
+| `astrofeed-server`      | Flask web app for hosting the astronomy feeds.                                                                                                     |
 | `astronomy-feeds`       | Python module for crawling the [Bluesky](https://bsky.app) firehose of posts and finding all that match criteria specified by the Astronomy feeds. |
-| `BlueSky-Mastadon-CLI`  | Basic command-line-interface (CLI) scripts to post to BlueSky and Mastodon simultaneously.                                                                                                                           |
-| `branding`              | Branding resources and logos for the Astronomy feeds.                                                                                                                                                                |
-| `development-guide`     | This guide!                                                                                                                                                                                                          |
-| `dm-bouncer`            | A direct message 'bouncing' service for limited group DMs. Intended for communication for moderators on the Astronomy feed.                                                                                          |
-| `Galaxy-Zoo-Poster-Bot` | A bot to post an image of a galaxy from the Galaxy Zoo archives every hour on BlueSky.                                                                                                                               |
-| `rules`                 | Rules which anyone posting to the Astronomy feeds must follow.                                                                                                                                                       |
-| `scripts`               | Scripts and notebooks to do various little jobs, like database maintenance or making plots.                                                                                                                          |
-| `website`               | The astronomy.blue website.                                                                                                                                                                                          |
+| `BlueSky-Mastadon-CLI`  | Basic command-line-interface (CLI) scripts to post to BlueSky and Mastodon simultaneously.                                                         |
+| `branding`              | Branding resources and logos for the Astronomy feeds.                                                                                              |
+| `development-guide`     | This guide!                                                                                                                                        |
+| `dm-bouncer`            | A direct message 'bouncing' service for limited group DMs. Intended for communication for moderators on the Astronomy feed.                        |
+| `Galaxy-Zoo-Poster-Bot` | A bot to post an image of a galaxy from the Galaxy Zoo archives every hour on BlueSky.                                                             |
+| `rules`                 | Rules which anyone posting to the Astronomy feeds must follow.                                                                                     |
+| `scripts`               | Scripts and notebooks to do various little jobs, like database maintenance or making plots.                                                        |
+| `website`               | The astronomy.blue website.                                                                                                                        |
 
 
 ## Workflows and Standards
