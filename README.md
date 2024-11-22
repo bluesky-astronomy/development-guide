@@ -58,8 +58,6 @@ The **Astronomy on Bluesky** project consists of the following repositories:
 | `scripts`               | Scripts and notebooks to do various little jobs, like database maintenance or making plots.                                                                                                                          |
 | `website`               | The astronomy.blue website.                                                                                                                                                                                          |
 
-For more details, see the [Repository Documentation](docs/repos.md).
-
 
 ## Workflows and Standards
 
