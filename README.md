@@ -77,6 +77,8 @@ The **Astronomy on Bluesky** project consists of the following repositories:
 - **Code Style**:
   - For now, recommend following community-supported standards and best practices for each language. For example:
     - Python: [PEP 8 -- Style Guide for Python Code](https://peps.python.org/pep-0008/)
+    - Python: Usage of Type Hints on variable definition. For example:
+      - num_files: int
     - Typescript: [Airbnb style guide](https://github.com/airbnb/javascript)
   - Formal guidance for code style coming soon!
 - **Branching Strategy**:
