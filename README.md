@@ -38,15 +38,28 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 **2. Clone the repository you'd like to work on - either with git:**
 
-```git clone <repo_url>```
+```bash
+git clone <repo_url>
+```
 
 **or the [GitHub CLI:](https://cli.github.com/)**
 
-```gh repo clone bluesky-astronomy/<repo_name>```
+```bash
+gh repo clone bluesky-astronomy/<repo_name>
+```
 
 **3. Navigate into the repo and initialize a virtual environment with uv:**
 
-```uv sync```
+```bash
+uv sync
+```
+
+**4. Set up relevant environment variables**
+
+Required environment variables for each project are/will be documented in the readme file of every repository. 
+
+> [!NOTE]  
+> To work with a repository that requires setting the `BLUESKY_DATABASE` environment variable, you'll need to download the development copy of the database. Currently, the link lives in a pinned message in the #dev-discussion channel on the development Discord.
 
 
 ## Repository Structure
@@ -83,8 +96,8 @@ The **Astronomy on Bluesky** project consists of the following repositories:
     - Typescript: [Airbnb style guide](https://github.com/airbnb/javascript)
   - Formal guidance for code style coming soon!
 - **Branching Strategy**:
-  - Use the `feature-`, `bugfix-`, and `hotfix-` prefixes for branches.
-  - Main branches: `main`, `develop`.
+  - Use the `feature-`, `bugfix-`, `hotfix-`, and `chore-` prefixes for branches.
+  - Main branch: `main`.
   - The `main` branch has branch protections on most repositories (see above table.) Commits to main will require approval.
 - **Code Reviews**:
   - All code must go through a pull request (PR) process.
