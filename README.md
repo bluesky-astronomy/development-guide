@@ -112,19 +112,19 @@ The **Astronomy on Bluesky** project consists of the following repositories:
 ## Resources and Support
 
 ### Astronomy on Bluesky
-- [GitHub org that all code lives in](https://discord.com/channels/1309051071406276658/1309497906000035911/1309499545104814170)
-- [The current to-do list](https://discord.com/channels/1309051071406276658/1309497906000035911/1309499545104814170)
-- [Our stub website](https://discord.com/channels/1309051071406276658/1309497906000035911/1309499545104814170) that needs an overhaul...
+- [GitHub org that all code lives in](https://github.com/bluesky-astronomy)
+- [The current to-do list](https://github.com/orgs/bluesky-astronomy/projects/1/views/1)
+- [Our stub website](https://astronomy.blue) that needs an overhaul...
 ### Useful documentation
 #### AT Protocol
-- [Docs for the Python SDK](https://discord.com/channels/1309051071406276658/1309497906000035911/1309500044755472415)
-- [Official protocol docs](https://discord.com/channels/1309051071406276658/1309497906000035911/1309500044755472415)
-- [Bluesky's source code](https://discord.com/channels/1309051071406276658/1309497906000035911/1309500044755472415)
+- [Docs for the Python SDK](https://atproto.blue)
+- [Official protocol docs](https://atproto.com)
+- [Bluesky's source code](https://github.com/bluesky-social/atproto)
 #### Other libraries
-- [peewee](https://discord.com/channels/1309051071406276658/1309497906000035911/1309500044755472415), our database ORM
+- [peewee](https://docs.peewee-orm.com), our database ORM
 #### Useful 3rd party tools
-- [edavis.dev's charts of Bluesky activity](https://discord.com/channels/1309051071406276658/1309497906000035911/1309501009680138250)
-- [Jaz's stats page](https://discord.com/channels/1309051071406276658/1309497906000035911/1309501009680138250)
-- [Bluesky handle debug tool](https://discord.com/channels/1309051071406276658/1309497906000035911/1309501009680138250) (can also look up DIDs)
-- [Clearsky search tool](https://discord.com/channels/1309051071406276658/1309497906000035911/1309501009680138250)
-- [Searchable list of all firehose commits](https://discord.com/channels/1309051071406276658/1309497906000035911/1309501009680138250) (currently down as of 22nd Nov.)
+- [edavis.dev's charts of Bluesky activity](https://bskycharts.edavis.dev/bluesky-day.html)
+- [Jaz's stats page](https://bsky.jazco.dev/stats)
+- [Bluesky handle debug tool](https://bsky-debug.app/handle?handle=astronomy.blue) (can also look up DIDs)
+- [Clearsky search tool](https://bsky.thieflord.dev/) (currently down as of 19th Dec.)
+- [Searchable list of all firehose commits](https://atproto.tools/) (currently down as of 22nd Nov.)
