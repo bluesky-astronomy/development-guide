@@ -120,6 +120,7 @@ The **Astronomy on Bluesky** project consists of the following repositories:
 - [Docs for the Python SDK](https://atproto.blue)
 - [Official protocol docs](https://atproto.com)
 - [Bluesky's source code](https://github.com/bluesky-social/atproto)
+- [A nice introductory talk about AT Protocol](https://www.youtube.com/watch?v=F1sJW6nTP6E)
 #### Other libraries
 - [peewee](https://docs.peewee-orm.com), our database ORM
 #### Useful 3rd party tools
