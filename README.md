@@ -66,23 +66,22 @@ Required environment variables for each project are/will be documented in the re
 
 The **Astronomy on Bluesky** project consists of the following repositories:
 
-| **Repository**          | **Description**                                                                                                                                    | **Branch protection?** |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
-| `.github`               | Template things for the Bluesky-Astronomy organization.                                                                                            | Yes                    |
-| `astro-ph-bots`         | A collection of bots that post new papers added to astro-ph to Bluesky.                                                                            | Yes                    |
-| `astrobot`              | A bot that handles actions on the Astronomy feeds, like signups. It will also eventually include moderation and DM tools.                          | Yes                    |
-| `astrofeed-lib`         | Common functions for working with the Astronomy feeds, including the database and feed spec.                                                       | Yes                    |
-| `astrofeed-news-bot`    | A bot for posting news and updates about the Astronomy feeds.                                                                                      | Yes                    |
-| `astrofeed-server`      | Flask web app for hosting the astronomy feeds.                                                                                                     | Yes                    |
-| `astronomy-feeds`       | Python module for crawling the [Bluesky](https://bsky.app) firehose of posts and finding all that match criteria specified by the Astronomy feeds. | Yes                    |
-| `BlueSky-Mastadon-CLI`  | Basic command-line-interface (CLI) scripts to post to BlueSky and Mastodon simultaneously.                                                         | Yes                    |
-| `branding`              | Branding resources and logos for the Astronomy feeds.                                                                                              | Yes                    |
-| `development-guide`     | This guide!                                                                                                                                        |                        |
-| `dm-bouncer`            | A direct message 'bouncing' service for limited group DMs. Intended for communication for moderators on the Astronomy feed.                        | Yes                    |
-| `Galaxy-Zoo-Poster-Bot` | A bot to post an image of a galaxy from the Galaxy Zoo archives every hour on BlueSky.                                                             | Yes                    |
-| `rules`                 | Rules which anyone posting to the Astronomy feeds must follow.                                                                                     | Yes                    |
-| `scripts`               | Scripts and notebooks to do various little jobs, like database maintenance or making plots.                                                        |                        |
-| `website`               | The astronomy.blue website.                                                                                                                        | Yes                    |
+| **Repository**          | **Description**                                                                                                                                    | **Branch protection?** | **Private?** |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------ |
+| `.github`               | Template things for the Bluesky-Astronomy organization.                                                                                            | Yes                    |              |
+| `astro-ph-bots`         | A collection of bots that post new papers added to astro-ph to Bluesky.                                                                            | Yes                    |              |
+| `astrofeed-news-bot`    | A bot for posting news and updates about the Astronomy feeds.                                                                                      | Yes                    |              |
+| `astronomy-feeds`       | Python module for crawling the [Bluesky](https://bsky.app) firehose of posts and finding all that match criteria specified by the Astronomy feeds. | Yes                    |              |
+| `BlueSky-Mastadon-CLI`  | Basic command-line-interface (CLI) scripts to post to BlueSky and Mastodon simultaneously.                                                         | Yes                    |              |
+| `branding`              | Branding resources and logos for the Astronomy feeds.                                                                                              | Yes                    |              |
+| `development-guide`     | This guide!                                                                                                                                        |                        |              |
+| `devops`                | Devops resources, including Ansible configurations for deploying servers.                                                                          | Yes                    | Yes          |
+| `dm-bouncer`            | A direct message 'bouncing' service for limited group DMs. Intended for communication for moderators on the Astronomy feed.                        | Yes                    |              |
+| `Galaxy-Zoo-Poster-Bot` | A bot to post an image of a galaxy from the Galaxy Zoo archives every hour on BlueSky.                                                             | Yes                    |              |
+| `moderation-guide`      | A guide for the feed moderators, with instructions about things like what to moderate (and how.)                                                   | No                     |              |
+| `rules`                 | Rules which anyone posting to the Astronomy feeds must follow.                                                                                     | Yes                    |              |
+| `scripts`               | Scripts and notebooks to do various little jobs, like database maintenance or making plots.                                                        |                        |              |
+| `website`               | The astronomy.blue website.                                                                                                                        | Yes                    |              |
 
 
 ## Workflows and Standards
@@ -93,7 +92,7 @@ The **Astronomy on Bluesky** project consists of the following repositories:
     - Python: Usage of Type Hints on variable definition. For example:
       - num_files: int
       - user_name: str
-    - Typescript: [Airbnb style guide](https://github.com/airbnb/javascript)
+    - JavaScript/Typescript: [Airbnb style guide](https://github.com/airbnb/javascript)
   - Formal guidance for code style coming soon!
 - **Branching Strategy**:
   - Use the `feature-`, `bugfix-`, `hotfix-`, and `chore-` prefixes for branches.
