@@ -89,6 +89,7 @@ The **Astronomy on Bluesky** project consists of the following repositories:
 - **Code Style**:
   - For now, recommend following community-supported standards and best practices for each language. For example:
     - Python: [PEP 8 -- Style Guide for Python Code](https://peps.python.org/pep-0008/)
+    - Python: Run code through [Ruff](https://docs.astral.sh/ruff/)
     - Python: Usage of Type Hints on variable definition. For example:
       - num_files: int
       - user_name: str
