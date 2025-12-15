@@ -31,6 +31,8 @@ Follow these steps to get started:
 
 ## Development Environment Setup
 
+### Python projects
+
 **1. Install the [uv python package manager](https://docs.astral.sh/uv/):**
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -54,25 +56,59 @@ gh repo clone bluesky-astronomy/<repo_name>
 uv sync
 ```
 
-**4. Set up relevant environment variables**
+**4. Install PostgreSQL**
+
+Many services require a running PostgreSQL development database to run locally. Detailed instructions are in [this file](https://github.com/bluesky-astronomy/development-guide/blob/main/PostgreSQLHowTo.pdf). You will also need to download a copy of the development database (for now: ask Emily.)
+
+
+**5. Set up relevant environment variables**
 
 Required environment variables for each project are/will be documented in the readme file of every repository. 
 
 > [!NOTE]  
-> To work with a repository that requires setting the `BLUESKY_DATABASE` environment variable, you'll need to download the development copy of the database. Currently, the link lives in a pinned message in the #dev-discussion channel on the development Discord.
+> To work with a repository that requires setting the `BLUESKY_DATABASE` environment variable, you'll need to download the development copy of the database. We're in the process of updating how this gets shared and downloaded (December 2025); for now, please ask Emily for a copy.
+
+
+### Svelte projects (for now: just the website)
+
+**1. Install npm**
+
+We recommend first installing [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) to manage node.js installs. Then, install the latest LTS release of npm with
+
+```bash
+nvm install --lts
+```
+
+```bash
+nvm use --lts
+```
+
+
+**2. Install required dependencies**
+
+Instructions may depend on the project, but this is usually as simple as doing `npm install` in the folder.
+
+
+**3. Start development server**
+
+The following `npm` commands are useful:
+
+- `npm run dev`: runs a development copy of the server locally.
+- `npm run build`: performs a test build of the site/app. Useful to test build pipeline.
+- `npm run preview`: previews the site/app locally from build artifacts. Useful to test build pipeline.
+
+> [!NOTE]  
+> Some parts of the website require connection to the Flask backend. By default, in dev mode, the website is configured to connect to a **locally running** Flask server. You will need to go through the Python setup steps above, get a dev database running, set the dev environment variable, and then do `./run_server` in the astronomy-feeds folder to start a Flask server. (See [this guide](https://github.com/bluesky-astronomy/astronomy-feeds?tab=readme-ov-file#astrofeed_server)).
 
 
 ## Repository Structure
 
-The **Astronomy on Bluesky** project consists of the following repositories:
+The **Astronomy on Bluesky** project consists of the following (main) repositories:
 
 | **Repository**          | **Description**                                                                                                                                    | **Branch protection?** | **Private?** |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------ |
 | `.github`               | Template things for the Bluesky-Astronomy organization.                                                                                            | Yes                    |              |
-| `astro-ph-bots`         | A collection of bots that post new papers added to astro-ph to Bluesky.                                                                            | Yes                    |              |
-| `astrofeed-news-bot`    | A bot for posting news and updates about the Astronomy feeds.                                                                                      | Yes                    |              |
 | `astronomy-feeds`       | MAIN MODULE. Includes code for the firehose, database spec, a moderation bot, and a Flask server to serve the feeds to users.                      | Yes                    |              |
-| `BlueSky-Mastadon-CLI`  | Basic command-line-interface (CLI) scripts to post to BlueSky and Mastodon simultaneously.                                                         | Yes                    |              |
 | `branding`              | Branding resources and logos for the Astronomy feeds.                                                                                              | Yes                    |              |
 | `development-guide`     | This guide!                                                                                                                                        |                        |              |
 | `devops`                | Devops resources, including Ansible configurations for deploying servers.                                                                          | Yes                    | Yes          |
@@ -94,7 +130,6 @@ The **Astronomy on Bluesky** project consists of the following repositories:
       - num_files: int
       - user_name: str
     - JavaScript/Typescript: [Airbnb style guide](https://github.com/airbnb/javascript)
-  - Formal guidance for code style coming soon!
 - **Branching Strategy**:
   - Use the `feature-`, `bugfix-`, `hotfix-`, and `chore-` prefixes for branches.
   - Main branch: `main`.
@@ -104,17 +139,18 @@ The **Astronomy on Bluesky** project consists of the following repositories:
   - Assign at least one reviewer.
 - **Testing**:
   - Unit tests are required (where possible) for all new features.
+  - On the team, Vince has the most experience with setting up unit tests in the astronomy-feeds repo.
   - Run tests locally before submitting a PR.
 - **CI/CD Pipeline**:
-  - Coming soon!
+  - More coming soon! For now, the astronomy-feeds repo is checked for style with ruff on all PRs.
 
 
 ## Resources and Support
 
 ### Astronomy on Bluesky
 - [GitHub org that all code lives in](https://github.com/bluesky-astronomy)
-- [The current to-do list](https://github.com/orgs/bluesky-astronomy/projects/1/views/1)
-- [Our stub website](https://astronomy.blue) that needs an overhaul...
+- [Development plan (is always the pinned issue)](https://github.com/bluesky-astronomy/astronomy-feeds/issues)
+- [Our website](https://astrosky.eco)
 ### Useful documentation
 #### AT Protocol
 - [Docs for the Python SDK](https://atproto.blue)
@@ -123,6 +159,7 @@ The **Astronomy on Bluesky** project consists of the following repositories:
 - [A nice introductory talk about AT Protocol](https://www.youtube.com/watch?v=F1sJW6nTP6E)
 #### Other libraries
 - [peewee](https://docs.peewee-orm.com), our database ORM
+- [Svelte/SvelteKit](https://svelte.dev/), our frontend framework of choice for web apps
 #### Useful 3rd party tools
 - [edavis.dev's charts of Bluesky activity](https://bskycharts.edavis.dev/bluesky-day.html)
 - [Jaz's stats page](https://bsky.jazco.dev/stats)
