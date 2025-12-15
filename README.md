@@ -58,7 +58,7 @@ uv sync
 
 **4. Install PostgreSQL**
 
-Many services require a running PostgreSQL development database to run locally. Detailed instructions are in [this file](https://github.com/bluesky-astronomy/development-guide/blob/main/PostgreSQLHowTo.pdf). You will also need to download a copy of the development database (for now: ask Emily.)
+Many services require a running PostgreSQL development database to run locally. Detailed instructions are in [this file](https://github.com/bluesky-astronomy/development-guide/blob/main/PostgreSQLHowTo.pdf). You will also need to download a copy of the development database - for now: ask Emily. (As of December 2025, we're hoping to improve this step soon - sorry!)
 
 
 **5. Set up relevant environment variables**
@@ -161,8 +161,10 @@ The **Astronomy on Bluesky** project consists of the following (main) repositori
 - [peewee](https://docs.peewee-orm.com), our database ORM
 - [Svelte/SvelteKit](https://svelte.dev/), our frontend framework of choice for web apps
 #### Useful 3rd party tools
+- [Bluesky handle debug tool](https://bsky-debug.app/handle?handle=astronomy.blue) (can also look up DIDs)
+- [Explore the records on any Bluesky PDS](https://pdsls.dev/)
+- [Clearsky search tool](https://bsky.thieflord.dev/) (can look up various things)
+- [Look up different AT Protocol lexicons](https://lexidex.bsky.dev/)
 - [edavis.dev's charts of Bluesky activity](https://bskycharts.edavis.dev/bluesky-day.html)
 - [Jaz's stats page](https://bsky.jazco.dev/stats)
-- [Bluesky handle debug tool](https://bsky-debug.app/handle?handle=astronomy.blue) (can also look up DIDs)
-- [Clearsky search tool](https://bsky.thieflord.dev/) (currently down as of 19th Dec.)
-- [Searchable list of all firehose commits](https://atproto.tools/) (currently down as of 22nd Nov.)
+- [Searchable list of all firehose commits](https://atproto.tools/) (down as of 22nd Nov. 2024)
