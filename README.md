@@ -56,9 +56,21 @@ gh repo clone bluesky-astronomy/<repo_name>
 uv sync
 ```
 
-**4. Install PostgreSQL**
+**4. Install & start PostgreSQL**
 
-Many services require a running PostgreSQL development database to run locally. Detailed instructions are in [this file](https://github.com/bluesky-astronomy/development-guide/blob/main/PostgreSQLHowTo.pdf). You will also need to download a copy of the development database - for now: ask Emily. (As of December 2025, we're hoping to improve this step soon - sorry!)
+Many services require a running PostgreSQL development database to run locally. Detailed instructions are in [this file](https://github.com/bluesky-astronomy/development-guide/blob/main/PostgreSQLHowTo.pdf). We also recommend installing [pgAdmin](https://www.pgadmin.org/) to make managing local databases much easier.
+
+Make sure to start the PostgreSQL image every time you work on the project with `sudo docker start AstroskyDB`.
+
+You will also need to download a copy of the development database - for now: ask Emily. (As of December 2025, we're hoping to improve this step soon - sorry!)
+
+Once you download the dev database, you can load it to your (running) Docker container with
+
+```bash
+psql -h localhost -U postgres devdb < devdb.sql
+```
+
+replacing -U with your user (if changed)  assuming that you have a PostgreSQL client installed on your system. (There may also be a way to do this step with pgAdmin.)
 
 
 **5. Set up relevant environment variables**
@@ -67,6 +79,15 @@ Required environment variables for each project are/will be documented in the re
 
 > [!NOTE]  
 > To work with a repository that requires setting the `BLUESKY_DATABASE` environment variable, you'll need to download the development copy of the database. We're in the process of updating how this gets shared and downloaded (December 2025); for now, please ask Emily for a copy.
+
+As a hint, you could use a setup like
+
+```bash
+ASTROFEED_PRODUCTION=0
+ASTROFEED_POSTGRES=0
+BLUESKY_DATABASE="postgres://<your_db_username>:<your_db_password>@localhost:5432/<your_db_name>?ssl-mode=REQUIRED"
+DEBUG_ENABLED=1
+```
 
 
 ### Svelte projects (for now: just the website)
@@ -82,7 +103,6 @@ nvm install --lts
 ```bash
 nvm use --lts
 ```
-
 
 **2. Install required dependencies**
 
@@ -157,6 +177,8 @@ The **Astronomy on Bluesky** project consists of the following (main) repositori
 - [Official protocol docs](https://atproto.com)
 - [Bluesky's source code](https://github.com/bluesky-social/atproto)
 - [A nice introductory talk about AT Protocol](https://www.youtube.com/watch?v=F1sJW6nTP6E)
+- [An amazing flowchart of the AT Protocol's structure](https://viewer.diagrams.net/index.html?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=atproto-architecture.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1WDJej0HWRPDeEnWirvPj8J2GDSJDP_VE%26export%3Ddownload#%7B%22pageId%22%3A%22455tzr0xFK6uB9m02suU%22%7D)
+
 #### Other libraries
 - [peewee](https://docs.peewee-orm.com), our database ORM
 - [Svelte/SvelteKit](https://svelte.dev/), our frontend framework of choice for web apps
